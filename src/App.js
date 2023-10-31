@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { data } from './Components/EmpArray';
 import UserComponent from './Components/UserComponents';
-// import AddUser from './Components/AddUser';
-// import EditUser from './Components/EditUser';
+import AddUser from './Components/AddUser';
+import EditUser from './Components/EditUser';
 import { NoPage } from './Components/NoPage';
 
 
