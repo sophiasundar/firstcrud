@@ -23,7 +23,7 @@ export default function AddUser({user,setUser}){
         // console.log(newUser)
         
         setUser([...user, newUser]);
-        navigate.push("/")
+        navigate("/")
         setName("");
         setBatch("");
         setEmail("");

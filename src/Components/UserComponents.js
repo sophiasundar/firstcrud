@@ -21,16 +21,17 @@ export default function UserComponent({user,setUser}){
             <div key={idx} className="user-card">
                 
                 <h1>{person.name}</h1>
+                <h4>id:{person.id}</h4>
                 <p>Batch:{person.batch}</p>
                 <p>Email:{person.email}</p>
                 <p>Exp:{person.experience}</p>
                 
                 <div className="btn-group">
                     <button
-                    onClick={()=>navigate.push(`/edit/${person.id}`)}
+                    onClick={()=>navigate(`/edit/${person.id}`)}
                     className="btn-one">Edit</button>
                     <button 
-                    onClick={()=>navigate.push(`/user/${idx}`)}
+                    onClick={()=>navigate(`/user/${idx}`)}
                     className="view-btn">View</button>
                     <button className="btn"
                     onClick={()=>deleteUser(person.id)}

@@ -8,12 +8,12 @@ export default function MainUser({title,styles,children}){
           <div className = "nav">
           <span>
              <button
-             onClick={()=>navigate.push("/add/user")}>Add user
+             onClick={()=>navigate("/add/user")}>Add user
              </button>
          </span>
          <span>
              <button
-              onClick={()=>navigate.push("/")}>Dashboard
+              onClick={()=>navigate("/")}>Dashboard
              </button>
          </span>
          

@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import MainUser from "./MainUser";
 
 export default function EditUser({user,setUser}){
-    const history = useHistory()
+    
     const[name,setName] = useState("");
     const[idx,setIdx] = useState("");
     const[email,setEmail] = useState("");
     const[experience,setExperience] = useState("");
     const[batch,setBatch] = useState("");
-   
+    const navigate = useNavigate();
 
     const {id} = useParams();
     console.log(id);
@@ -36,11 +36,11 @@ export default function EditUser({user,setUser}){
         experience,
         batch
        }
-       console.log(editedData)
+    //    console.log(editedData)
      user[editIndex] = editedData;
      setUser([...user])
      console.log(user)
-     history.push("/")
+     navigate("/")
      
 
     }

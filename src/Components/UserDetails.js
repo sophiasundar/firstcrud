@@ -13,6 +13,7 @@ export function UserDetails({user}){
      <div className = "user-content">
                 <div className="user-card">
                 <h1>Name:{person.name}</h1>
+                <h4>id:{person.id}</h4>
                 <p>Batch:{person.batch}</p>
                 <p>Email:{person.email}</p>
                 <p>Exp:{person.experience}</p>
