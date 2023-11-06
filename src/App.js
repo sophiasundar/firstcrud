@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { data } from './Components/EmpArray';
@@ -7,6 +7,8 @@ import UserComponent from './Components/UserComponents';
 import AddUser from './Components/AddUser';
 import EditUser from './Components/EditUser';
 import { NoPage } from './Components/NoPage';
+import { UserDetails } from './Components/UserDetails';
+// import { Redirect } from 'react-router-dom';
 
 
 function App() {
@@ -29,7 +31,8 @@ function App() {
             </Route>
 
           <Route path="/user/:id">
-            <UserDetails user={user}
+            <UserDetails
+            user={user}
             setUser={setUser}/>
             </Route>
 
@@ -38,9 +41,9 @@ function App() {
              setUser={setUser}/>
              </Route>
 
-          <Route path="/users">
-            <Redirect path="/"/>
-            </Route>  
+          {/* <Route path="/users">
+           <Redirect path="/"/>
+            </Route>   */}
 
           <Route path = "**">
            <NoPage/>

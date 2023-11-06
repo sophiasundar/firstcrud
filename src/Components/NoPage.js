@@ -5,9 +5,9 @@ export function NoPage(){
     const navigate = useNavigate()
     return(
         <div>
-            <h1>Go to Dashboard</h1>
+            <h1 style={{color:"green"}}>Go to Dashboard</h1>
             <button
-            onClick={()=>navigate.push("/")}>
+            onClick={()=>navigate("/")}>
               Dashboard
             </button>
         </div>
